@@ -1,0 +1,33 @@
+POST http://localhost:3000/post HTTP/1.1
+content-type: application/json
+Cookie: userId=98c12be51bf47ad6
+
+{ 
+    "text": "Text for the post",
+    "pictures": [
+         "https://cdn.pixabay.com/photo/2019/12/17/14/07/amaryllis-4701720_960_720.jpg"
+    ],
+    "date": "09-24-2020" 
+}
+
+###
+GET http://localhost:3000/post/ea66cd843e9a281d HTTP/1.1
+
+###
+GET http://localhost:3000/post?offset=0 HTTP/1.1
+
+###
+DELETE http://localhost:3000/post/ff5749024689fa1c HTTP/1.1
+Cookie: userId=95c1cb7df28db479
+
+###
+PATCH http://localhost:3000/post/ea66cd843e9a281d HTTP/1.1
+content-type: application/json
+Cookie: userId=98c12be51bf47ad6
+
+{
+    "text": "Hey :-)",
+    "pictures": [
+       "https://cdn.pixabay.com/photo/2020/12/19/10/45/mountains-5844031_960_720.jpg"
+    ]
+}
